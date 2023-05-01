@@ -1,47 +1,45 @@
----
-title: Estructurando la web con HTML
-slug: Learn/HTML
----
+# Basic Pong HTML and JavaScript Game
 
-{{LearnSidebar}}
+This is a basic implementation of the Atari Pong game, but it's missing a few things intentionally and they're left as further exploration for the reader.
 
-Para crear sitios web, debes conocer el {{Glossary('HTML')}} — la tecnología fundamental que se utiliza para definir la estructura de una página web. HTML se utiliza para especificar si tu contenido web se debe reconocer como un párrafo, lista, encabezado, enlace, imagen, reproductor multimedia, formulario o uno de los muchos otros elementos disponibles o incluso un nuevo elemento que tú definas.
+<img width="300" height="233" alt="" src="https://user-images.githubusercontent.com/2433219/94984423-03b57400-0509-11eb-91b0-974280cec0a2.png">
 
-> #### ¿Quieres transformarte en un desarrollador de la interfaz de usuario web?
->
-> Hemos elaborado un curso que incluye toda la información esencial que necesitas para trabajar hacia tu objetivo.
->
-> [Empieza aquí](/es/docs/Learn/Front-end_web_developer)
+## Further Exploration
 
-## Prerrequisitos
+- Score
+  - When a ball goes past a paddle, the other player should score a point. Use [context.fillText()](https://developer.mozilla.org/en-US/docs/Web/API/CanvasRenderingContext2D/fillText) to display the score to the screen
+- Mobile and touchscreen support
+  - Allow the game to be scaled down to a phone size. See https://codepen.io/straker/pen/VazMaL
+  - Support [touch controls](https://developer.mozilla.org/en-US/docs/Web/API/Touch_events)
+- Ball trajectory
+  - The ball should change trajectory based on where it hit the paddle. For example, if it hit the topmost part of the paddle it should have a sharp angle upward, whereas if it hit the direct middle of the paddle it should move completely flat towards the other payer.
+  
+**Important note:** I will answer questions about the code but will not add more features or answer questions about adding more features. This series is meant to give a basic outline of the game but nothing more.
+  
+## License
 
-Antes de comenzar con este tema, debes tener al menos una familiaridad básica con el uso de computadoras y el uso pasivo de la web (es decir, simplemente mirarlo, consumir el contenido). Debes tener un entorno de trabajo básico configurado como se detalla en [Instalación de software básico](/es/docs/Learn/Getting_started_with_the_web/Installing_basic_software), y comprender cómo crear y administrar archivos, como se detalla en [Manejo de archivos](/es/docs/Learn/Getting_started_with_the_web/Dealing_with_files); ambos son parte del módulo para principiantes en la [Introducción a la Web](/es/docs/Learn/Getting_started_with_the_web).
+(CC0 1.0 Universal) You're free to use this game and code in any project, personal or commercial. There's no need to ask permission before using these. Giving attribution is not required, but appreciated.
 
-Se recomienda que trabajes con [Comenzando con la web](/es/docs/Learn/Getting_started_with_the_web) antes de intentar este tema, sin embargo, no es absolutamente necesario; gran parte de lo que se cubre en el artículo [conceptos básicos de HTML](/es/docs/Learn/Getting_started_with_the_web/HTML_basics) también se cubre en el [Módulo de introducción a HTML](/es/docs/Learn/HTML/Introduction_to_HTML), aunque con mucho más detalle.
+## Other Basic Games
 
-Después de comprender HTML, puedes pasar a aprender temas más avanzados como:
+- [Snake](https://gist.github.com/straker/ff00b4b49669ad3dec890306d348adc4)
+- [Breakout](https://gist.github.com/straker/98a2aed6a7686d26c04810f08bfaf66b)
+- [Tetris](https://gist.github.com/straker/3c98304f8a6a9174efd8292800891ea1)
+- [Bomberman](https://gist.github.com/straker/769fb461e066147ea16ac2cb9463beae)
+- [Frogger](https://gist.github.com/straker/82a4368849cbd441b05bd6a044f2b2d3)
+- [Missile Command](https://gist.github.com/straker/afc4e2a30b6df772a5f9f6ef01751d41)
+- [Sokoban](https://gist.github.com/straker/2fddb507d4bb6bec54ea2fdb022d020c)
+- [Doodle Jump](https://gist.github.com/straker/b96a4a68bd6d79cf75a833d98a2b654f)
+- [Puzzle Bobble](https://gist.github.com/straker/afc5bedc7f4b4bc65ba8b05c435f6d32)
+- [Helicopter](https://gist.github.com/straker/0d25ae9d235f6a62f8287fd36a097043)
+- [Block Dude](https://gist.github.com/straker/df855f22e57576c80d6126aa5609654e)
 
-- [CSS](/es/docs/Learn/CSS), y cómo usarlo para estilizar HTML (por ejemplo, modificar el tamaño del texto y los tipos de letra utilizados, agregar bordes y sombras, modelar tu página con varias columnas, agregar animaciones y otros efectos visuales).
-- [JavaScript](/es/docs/Learn/JavaScript), y cómo usarlo para agregar funcionalidad dinámica a las páginas web (por ejemplo, encontrar tu ubicación y trazarla en un mapa, hacer que los elementos de la _**I**nterfaz de **U**suario_ (**IU** en adelante) aparezcan/desaparezcan cuando se alterna un botón, guardar los datos del usuario localmente en su computadora y mucho más).
+## Support
 
-## Módulos
+Basic HTML Games are made possible by users like you. When you become a [Patron](https://www.patreon.com/straker), you get access to behind the scenes development logs, the ability to vote on which games I work on next, and early access to the next Basic HTML Game.
 
-Este tema contiene los siguientes módulos, en un orden sugerido para trabajar con ellos. Definitivamente deberías comenzar con el primero.
+### Top Patrons
 
-- [Introducción a HTML](/es/docs/Learn/HTML/Introduction_to_HTML)
-  - : Este módulo prepara el escenario para que te acostumbres a conceptos y sintaxis importantes, explica cómo aplicar HTML al texto, cómo crear hipervínculos y cómo usar HTML para estructurar una página web.
-- [Multimedia e inserción](/es/docs/Learn/HTML/Multimedia_and_embedding)
-  - : Este módulo explora cómo usar HTML para incluir multimedia en tus páginas web, incluidas las diferentes formas en que se pueden incluir imágenes y cómo insertar video, audio e incluso otras páginas web completas.
-- [tablas HTML](/es/docs/Learn/HTML/Tables)
-  - : Representar datos tabulares en una página web de una manera comprensible y {{Glossary("Accessibility", "accesible")}} puede ser un desafío. Este módulo cubre el marcado básico de tablas, junto con características más complejas como la implementación de subtítulos y resúmenes.
-
-## Resolver problemas comunes de HTML
-
-[Usa HTML para resolver problemas comunes](/es/docs/Learn/HTML/Howto) proporciona vínculos a secciones de contenido que explican cómo usar HTML para resolver muchos problemas comunes al crear una página web: lidiar con títulos, agregar imágenes o videos, enfatizar contenido, crear una forma básica, etc.
-
-## Ve también
-
-- [Formularios Web](/es/docs/Learn/HTML/Forms)
-  - : Este módulo proporciona una serie de artículos que te ayudarán a dominar los conceptos básicos de los formularios web. Los formularios web son una herramienta muy poderosa para interactuar con los usuarios — generalmente, se utilizan para recopilar datos de los usuarios o para permitirles controlar una interfaz de usuario. Sin embargo, por razones históricas y técnicas, no siempre es obvio cómo utilizarlos en todo su potencial. Aborda todos los aspectos esenciales de los formularios web, incluido el marcado de su estructura HTML, el diseño de controles de formulario, la validación de datos de formulario y el envío de datos al servidor.
-- [HTML (lenguaje de marcado de hipertexto)](/es/docs/Web/HTML)
-  - : El punto de entrada principal para la documentación de referencia HTML en MDN, incluidas las referencias detalladas de elementos y atributos; si deseas saber qué atributos tiene un elemento o qué valores tiene un atributo, por ejemplo, este es un excelente lugar para comenzar.
+- Karar Al-Remahy
+- UnbrandedTech
+- Innkeeper Games
